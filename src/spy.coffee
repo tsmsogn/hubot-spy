@@ -3,7 +3,7 @@
 #
 # Commands:
 #   <user> who are you? - Display <user> id and name
-#   hubot who is <user>? - Display <user> id and name
+#   who is <user>? - Display <user> id and name
 #   who am i? - Display your id and name
 #
 # Notes:
