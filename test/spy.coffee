@@ -46,28 +46,18 @@ describe 'spy', ->
         expect(strings[0]).to.match /does not exist/i
         done()
 
-      adapter.receive(new TextMessage alice, "unknown_user who are you?")
+      adapter.receive(new TextMessage alice, "show unknown_user info")
 
     it 'successfully gets bob info', (done) ->
       adapter.on "reply", (envelope, strings) ->
         expect(strings[0]).to.match /2/i
-        expect(strings[0]).to.match /bob/i
         done()
 
-      adapter.receive(new TextMessage alice, "bob who are you?")
+      adapter.receive(new TextMessage alice, "show bob info")
 
-    it 'successfully gets bob info with spy', (done) ->
-      adapter.on "reply", (envelope, strings) ->
-        expect(strings[0]).to.match /2/i
-        expect(strings[0]).to.match /bob/i
-        done()
-
-      adapter.receive(new TextMessage alice, "who is bob?")
-
-    it 'successfully gets her info with "who am i?"', (done) ->
+    it 'successfully gets her info with "my"', (done) ->
       adapter.on "reply", (envelope, strings) ->
         expect(strings[0]).to.match /1/i
-        expect(strings[0]).to.match /alice/i
         done()
 
-      adapter.receive(new TextMessage alice, "who am i?")
+      adapter.receive(new TextMessage alice, "show my info")
