@@ -20,7 +20,7 @@ module.exports = (robot) ->
     return msg.reply "#{name} does not exist" unless user?
     msg.reply "#{name}'s id, name = " + [user.id, user.name].join(', ')
 
-  robot.respond /who is @?(.+)\?/i, (msg) ->
+  robot.hear /who is @?(.+)\?/i, (msg) ->
     name = msg.match[1].trim()
     user = robot.brain.userForName(name)
     return msg.reply "#{name} does not exist" unless user?

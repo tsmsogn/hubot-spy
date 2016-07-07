@@ -62,4 +62,4 @@ describe 'spy', ->
         expect(strings[0]).to.match /bob/i
         done()
 
-      adapter.receive(new TextMessage alice, "hubot: who is bob?")
+      adapter.receive(new TextMessage alice, "who is bob?")
