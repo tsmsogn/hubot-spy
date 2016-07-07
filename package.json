@@ -1,7 +1,7 @@
 {
   "name": "hubot-spy",
   "description": "Display user info",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Alex Williams (http://github.com/aw)",
   "contributors": [
     "technicalpickles",
